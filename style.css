@@ -1,0 +1,205 @@
+@font-face {
+	font-family: "ibm";
+	src: url("src/fonts/ibm-plex-sans-v14-latin-regular.woff2") format("woff2"),
+		url("src/fonts/ibm-plex-sans-v14-latin-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "ibm";
+	src: url("src/fonts/ibm-plex-sans-v14-latin-700.woff2") format("woff2"),
+		url("src/fonts/ibm-plex-sans-v14-latin-700.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "bungee";
+	src: url("src/fonts/bungee-shade-v11-latin-regular.woff2") format("woff2"),
+		url("src/fonts/bungee-shade-v11-latin-regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: ibm;
+}
+
+:root {
+	--main-Color: rgb(249, 86, 79);
+}
+
+.container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+}
+
+.image-section {
+	background-position: center;
+	background-image: url(/src/clouds.jpg);
+	background-size: cover;
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	justify-content: center;
+}
+
+.logo {
+	width: 100%;
+	background-color: rgba(143, 143, 143, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+}
+
+.logo img {
+	height: 150px;
+	width: auto;
+}
+
+.logo p {
+	font-family: bungee;
+	font-size: 2.7rem;
+}
+
+.form-section {
+	flex: 5;
+	background-color: rgb(243, 243, 243);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form-header p {
+	font-size: 1.2rem;
+	margin-left: 48px;
+	max-width: 80%;
+	margin-bottom: 8px;
+	font-weight: 700;
+}
+
+.form-header > p:first-child {
+	margin-bottom: 40px;
+}
+
+.input-section {
+	color: black;
+	background-color: white;
+	margin-top: 32px;
+	padding: 50px 0;
+	box-shadow: 2px 5px 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-section label {
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+	margin-bottom: 1px;
+}
+
+.inputs {
+	margin-left: 48px;
+}
+
+.inputs > div {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 84px;
+	row-gap: 18px;
+	margin-bottom: 18px;
+}
+
+.inputs label {
+	display: block;
+	font-size: 0.8rem;
+	margin-bottom: 5px;
+}
+
+.inputs input {
+	border: 1px solid #949494;
+	border-radius: 6px;
+	padding: 4px 8px;
+	width: 100%;
+	font-size: 1rem;
+	margin-right: 60px;
+}
+
+.input-section h3 {
+	font-size: 1.25rem;
+	font-weight: 400;
+	margin-top: 0;
+	margin-left: 48px;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.input-section p {
+	margin-left: 48px;
+	margin-bottom: 35px;
+}
+
+button {
+	margin-left: 48px;
+	margin-top: 32px;
+	border: none;
+	background-color: var(--main-Color);
+	padding: 12px 48px;
+	border-radius: 8px;
+	box-shadow: 2px 5px 5px 4px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	color: white;
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+span[aria-label="required"] {
+	color: red;
+}
+
+.inputs span[aria-label="required"] {
+	font-size: 1rem;
+	position: absolute;
+	margin-left: 5px;
+}
+
+.login-text {
+	margin: 15px 0 0 48px;
+}
+
+.login-text a {
+	color: var(--main-Color);
+}
+
+/* test */
+
+button:hover {
+	background-color: var(--main-Color), 0.6;
+	color: black;
+}
+
+button:hover::after {
+	content: " 👉";
+	position: absolute;
+	margin-left: 10px;
+}
+
+input:focus {
+	border: none;
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.342);
+	outline: none;
+}
+
+input:invalid:focus {
+	border: 2px solid rgb(255, 69, 100);
+}
+
+input:focus:valid {
+	border: rgb(0, 183, 255) 2px solid;
+}
